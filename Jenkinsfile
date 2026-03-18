@@ -1,4 +1,3 @@
-// Jenkinsfile
 pipeline {
     agent any
 
@@ -12,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t hello-abinaya .'
+                    sh 'docker build -t day20-app .'
                 }
             }
         }
@@ -20,7 +19,10 @@ pipeline {
         stage('Run Container') {
             steps {
                 script {
-                    sh 'docker run hello-abinaya'
+                    sh 'docker run day20-app'
                 }
             }
         }
+    }
+}
+
